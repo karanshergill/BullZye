@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy import text
 from sqlalchemy.engine import URL
 from sqlalchemy.orm import sessionmaker
-from EnvironmentConfiguration import db_host, db_name, db_user, db_password, db_port
+from environment_Configuration import db_host, db_name, db_user, db_password, db_port
 
 # Function to get database parameters from `EnvironmentConfiguration.py`
 def Get_Databse_Parameters():
