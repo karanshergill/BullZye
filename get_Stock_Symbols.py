@@ -23,7 +23,7 @@ filtered_data = [
 
 # SQL query to insert data
 insert_query = """
-INSERT INTO stocks (token, symbol, name, market, category)
+INSERT INTO stock_symbols (token, symbol, name, market, category)
 VALUES (:token, :symbol, :name, :market, :category)
 ON CONFLICT (token) DO NOTHING;  -- Assuming 'token' is a unique field
 """
