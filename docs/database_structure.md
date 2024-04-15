@@ -1,7 +1,14 @@
 # Database Structure
 Create the tables as below:
 
-1. Stock Symbols
+1. Calendar
+```sql
+CREATE TABLE market_trading_calendar (
+    trading_date DATE PRIMARY KEY NOT NULL
+);
+```
+
+2. Stock Symbols
 ```sql
 CREATE TABLE stock_symbols (
     id SERIAL PRIMARY KEY,
@@ -13,7 +20,7 @@ CREATE TABLE stock_symbols (
 );
 ```
 
-2. Historical Data - One Minute Interval
+3. Historical Data - One Minute Interval
 ```sql
 CREATE TABLE stocks_historical_data_one_minute_interval (
     timestamp TIMESTAMPTZ NOT NULL,
@@ -27,7 +34,7 @@ CREATE TABLE stocks_historical_data_one_minute_interval (
 );
 ```
 
-3. Historical Data - One Day Interval
+4. Historical Data - One Day Interval
 ```sql
 CREATE TABLE stocks_historical_data_one_day_interval (
     date DATE NOT NULL,
@@ -40,3 +47,4 @@ CREATE TABLE stocks_historical_data_one_day_interval (
     PRIMARY KEY (date, token)
 );
 ```
+
