@@ -1,5 +1,5 @@
 import pandas as pd
-from database_Connection import Get_Engine
+from database_Connection import get_engine
 from sqlalchemy import text
 import logging
 
@@ -24,7 +24,7 @@ date_range = pd.date_range(start='2022-01-01', end='2024-12-31', freq='B')  # 'B
 filtered_dates = [date for date in date_range if date.strftime('%Y-%m-%d') not in public_holidays]
 
 # Connect to the database
-engine = Get_Engine()
+engine = get_engine()
 
 # Insert the filtered dates into the table
 insert_query = """

@@ -1,8 +1,7 @@
 import requests
 import logging
-from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
-from database_Connection import get_engine  # Assuming the first script is saved as DatabaseConnection.py
+from database_Connection import get_engine
 
 # Variables for filtering
 exchange_segment = "NSE"
